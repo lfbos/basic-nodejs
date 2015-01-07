@@ -8,10 +8,10 @@ function iniciar(enrutar, manejador) {
 		
 		console.log("Alguien se ha conectado");
 
-		enrutar(manejador, ruta);
+		var contenido = enrutar(manejador, ruta);
 		
 		respuesta.writeHead(200, {"Content-Type": "text/html"});
-		respuesta.write("<h1>El servidor esta funciona correctamente</h1>");
+		respuesta.write(contenido);
 		respuesta.end();
 	}
 	servidor.createServer(arrancaServidor).listen(8888);
