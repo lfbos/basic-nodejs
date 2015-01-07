@@ -6,12 +6,20 @@ function iniciar(enrutar, manejador) {
 	function arrancaServidor(requiere, respuesta) {
 
 		var ruta = url.parse(requiere.url).pathname;
+
+		if(ruta == "/") {
+			ruta = "index.html";
+		} else if(ruta == "/pagina1") {
+			ruta = "pagina1.html";
+		} else if(ruta == "/pagina2") {
+			ruta = "pagina2.html";
+		}
 		
 		console.log("Alguien se ha conectado");
 
 		// var contenido = enrutar(manejador, ruta, respuesta);
 
-		var index = fs.readFileSync("www/index.html");
+		var index = fs.readFileSync("www/" + ruta);
 
 		var registro = fs.createWriteStream('registro.txt', {'flags': 'a'});
 		registro.write(ruta + '\n');
