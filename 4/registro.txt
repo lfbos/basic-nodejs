@@ -11,6 +11,10 @@
 /
 /favicon.ico
 /favicon.ico
-/
+/pagina1
+/favicon.ico
+/favicon.ico
+/pagina3
+/pagina2
 /favicon.ico
 /favicon.ico
