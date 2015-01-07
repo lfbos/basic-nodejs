@@ -11,8 +11,8 @@ function iniciar(enrutar, manejador) {
 
 		var contenido = enrutar(manejador, ruta);
 
-		var registro = fs.createWriteStream('registro.txt', {'flags': 'a'});
-		registro.write(ruta + '\n');
+		var registro = fs.createWriteStream('registro.txt', {'flags': a});
+		
 		respuesta.writeHead(200, {"Content-Type": "text/html"});
 		respuesta.write(contenido);
 		respuesta.end();
